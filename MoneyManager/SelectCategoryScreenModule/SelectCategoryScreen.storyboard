@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Category Screen View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SelectCategoryScreenId" id="BYZ-38-t0r" customClass="SelectCategoryScreenView" customModule="MoneyManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEQ-bO-KRe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.59607843140000005" green="0.47843137250000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="gs2-Ug-FOE"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6cz-m3-DH5">
+                                <rect key="frame" x="0.0" y="1" width="375" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aEQ-bO-KRe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AY9-Ip-maB"/>
+                            <constraint firstAttribute="trailing" secondItem="6cz-m3-DH5" secondAttribute="trailing" id="Vtu-OR-Iih"/>
+                            <constraint firstAttribute="trailing" secondItem="aEQ-bO-KRe" secondAttribute="trailing" id="g4T-AR-ib6"/>
+                            <constraint firstItem="6cz-m3-DH5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h7c-4D-5KB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6cz-m3-DH5" secondAttribute="bottom" id="lEY-9z-tbN"/>
+                            <constraint firstItem="6cz-m3-DH5" firstAttribute="top" secondItem="aEQ-bO-KRe" secondAttribute="bottom" id="vLP-fY-eDv"/>
+                            <constraint firstItem="aEQ-bO-KRe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zsa-fR-yxj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jji-uH-Yqx"/>
+                    <connections>
+                        <outlet property="tableView" destination="6cz-m3-DH5" id="Kuj-in-bcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="100"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transaction Screen View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="TransactionScreenId" id="BYZ-38-t0r" customClass="TransactionScreenView" customModule="MoneyManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ZR-Hp-T7h" userLabel="Separator View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.59607843137254901" green="0.47843137254901957" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="WyG-1k-hRQ"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BEt-Hu-aey">
+                                <rect key="frame" x="0.0" y="1" width="375" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="3Gv-ge-4B7"/>
+                                </constraints>
+                                <color key="tintColor" red="0.59607843140000005" green="0.47843137250000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VGd-4R-CAl">
+                                <rect key="frame" x="0.0" y="46" width="375" height="621"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VGd-4R-CAl" firstAttribute="top" secondItem="BEt-Hu-aey" secondAttribute="bottom" id="5rI-zd-fjY"/>
+                            <constraint firstAttribute="trailing" secondItem="BEt-Hu-aey" secondAttribute="trailing" id="IHX-Bb-a8u"/>
+                            <constraint firstItem="0ZR-Hp-T7h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JzG-Oy-mr4"/>
+                            <constraint firstItem="BEt-Hu-aey" firstAttribute="top" secondItem="0ZR-Hp-T7h" secondAttribute="bottom" id="Ksv-qc-DIX"/>
+                            <constraint firstAttribute="trailing" secondItem="VGd-4R-CAl" secondAttribute="trailing" id="NGh-jB-7BX"/>
+                            <constraint firstAttribute="trailing" secondItem="0ZR-Hp-T7h" secondAttribute="trailing" id="SYQ-FZ-uHk"/>
+                            <constraint firstItem="VGd-4R-CAl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vwq-Fo-FiY"/>
+                            <constraint firstItem="BEt-Hu-aey" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dfK-E0-64y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VGd-4R-CAl" secondAttribute="bottom" id="l5j-aR-1Lc"/>
+                            <constraint firstItem="0ZR-Hp-T7h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="teT-rG-M2y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jji-uH-Yqx"/>
+                    <connections>
+                        <outlet property="searchBar" destination="BEt-Hu-aey" id="sh0-On-4dw"/>
+                        <outlet property="tableView" destination="VGd-4R-CAl" id="jyh-Zd-3cP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="100"/>
+        </scene>
+    </scenes>
+</document>
