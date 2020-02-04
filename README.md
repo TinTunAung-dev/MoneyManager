@@ -1,5 +1,1 @@
-# MoneyManager
-#iOS
-#Swift
-# CoreData
-# Viper Architecture Design Pattern
+# MoneyManager Swift iOS App with Core Data And Viper Architecture Design Pattern
